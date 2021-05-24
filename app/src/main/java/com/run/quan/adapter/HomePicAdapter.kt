@@ -27,6 +27,7 @@ class HomePicAdapter(private var pic:ArrayList<PicBean.PicData>): RecyclerView.A
             .asBitmap()
             .override(Target.SIZE_ORIGINAL)
             .load(pic[position].thumbs?.large)
+//            .load(pic[position].path)
             .into(it)}
 
         holder.img?.setOnClickListener { click?.itemClick(pic[position], position) }

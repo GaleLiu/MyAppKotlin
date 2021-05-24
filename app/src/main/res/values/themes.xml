@@ -18,6 +18,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/translate_grey</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:listDivider">@drawable/rv_pic_divider</item>
     </style>
 
     <style name="NoTitleTranslucentTheme" parent="AppTheme">

@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.run.quan.R
+import com.run.quan.base.BaseActivity
 import com.run.quan.http.GetRequest_Interface
 import com.run.quan.http.RetrofitHelper
 import com.run.quan.http.bean.PicDetailBean
@@ -19,7 +20,7 @@ import retrofit2.Response
  * @Author GaleLiu
  * @Time 2021/05/22
  */
-class PicDetailActivity:AppCompatActivity() {
+class PicDetailActivity:BaseActivity() {
 
     var img:ImageView?=null
     var btn_like:ImageView?=null
@@ -28,12 +29,15 @@ class PicDetailActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pic_detail)
 
         img = findViewById(R.id.img)
         btn_like = findViewById(R.id.btn_like)
 
         picId = intent.getStringExtra("picId")
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_pic_detail
     }
 
     override fun onResume() {

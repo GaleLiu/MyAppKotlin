@@ -8,13 +8,14 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
 import com.run.quan.R
 import com.run.quan.adapter.HomeTabAdapter
+import com.run.quan.base.BaseActivity
 
 /**
  * @Description 这里用一句话描述
  * @Author GaleLiu
  * @Time 2021/05/17
  */
-class HomeActivity : AppCompatActivity(), OnTabSelectedListener {
+class HomeActivity : BaseActivity(), OnTabSelectedListener {
 
     private var tabs:TabLayout? = null
     private var vp2:ViewPager2? = null
@@ -24,9 +25,11 @@ class HomeActivity : AppCompatActivity(), OnTabSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_home)
-
         init()
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_home
     }
 
     private fun init() {
